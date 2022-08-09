@@ -1,0 +1,18 @@
+- access modifiers -
+public - visible outside a contract
+internal - visible to a contract and those that extend it
+private - visible to only the contract that defines it
+
+libraries are 'attached' to contracts
+
+- checked number -> not allowed to wrap around to zero when max limit is exceeded
+- unchecked -> wraps around to zero when max number limit is reached
+to perform an unchecked operation, do: unchecked {<operation>}
+- unchecked is used in solidity 0.8 and above to save on gas used in checking
+
+-- tricks for reducing gas --
+-> use constant and immutable variables
+-> use custom errors, revert and if statements instead of require
+
+-> special functions like callback, receive and constructor don't have the function
+ keyword preceding them
